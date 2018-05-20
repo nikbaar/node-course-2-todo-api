@@ -5,9 +5,9 @@ const{Todo} = require('./../server/models/todo');
 
 var id = '5adcc488c35433599cb64b981';
 
-// if (!ObjectID.isValid(id)) {
-//   console.log('ID not valid');
-// }
+if (!ObjectID.isValid(id)) {
+  console.log('ID not valid');
+}
 
 // Todo.find({
 //   _id: id
@@ -21,10 +21,10 @@ var id = '5adcc488c35433599cb64b981';
 //   console.log('Todo', todo);
 // });
 
-// Todo.findById(id)
-// .then((todo) => {
-//   if (!todo) {
-//     return console.log('ID not found')
-//   }
-//   console.log('Todo', todo);
-// }).catch((e) => console.log(e));
+Todo.findById(id)
+.then((todo) => {
+  if (!todo) {
+    return console.log('ID not found')
+  }
+  console.log('Todo', todo);
+}).catch((e) => console.log(e));
